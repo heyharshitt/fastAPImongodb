@@ -1,0 +1,79 @@
+use harshitecommDB
+
+db.createCollection('products')
+
+PART 3: Insert Product Records with Image URLs
+
+Example record insertion:
+
+db.products.insertMany([
+
+  {
+
+    name: "Yellow Embroidery Dress",
+
+    price: 2999,
+
+    category: "Women Ethnic",
+
+    image_url: "https://harshitecomm.blob.core.windows.net/images/yellow_dress.jpg",
+
+    stock: 10,
+
+    created_at: new Date()
+
+  },
+
+  {
+
+    name: "Blue High Waist Jeans",
+
+    price: 1999,
+
+    category: "Women Casual",
+
+    image_url: "https://harshitecomm.blob.core.windows.net/images/blue_jeans.jpg",
+
+    stock: 20,
+
+    created_at: new Date()
+
+  },
+
+  {
+
+    name: "Red Designer Dress",
+
+    price: 3499,
+
+    category: "Women Ethnic",
+
+    image_url: "https://harshitecomm.blob.core.windows.net/images/red_dress.jpg",
+
+    stock: 15,
+
+    created_at: new Date()
+
+  },
+
+  {
+
+    name: "White Formal Shirt",
+
+    price: 1499,
+
+    category: "Men Formal",
+
+    image_url: "https://harshitecomm.blob.core.windows.net/images/white_shirt.jpg",
+
+    stock: 30,
+
+    created_at: new Date()
+
+  }
+
+])
+
+ 
+
+ mongodb+srv://azureuser:aA1234567890@swarnae-aicomm-clusters.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
