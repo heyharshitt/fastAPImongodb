@@ -13,7 +13,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      name: test_agent   # ✅ Self-hosted pool
+      name: TestAgent   # ✅ Self-hosted pool
 
     steps:
     - script: |
@@ -46,7 +46,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool:
-      name: test_agent   # ✅ Self-hosted pool again
+      name: TestAgent   # ✅ Self-hosted pool again
 
     environment: harshitwebapp
 
