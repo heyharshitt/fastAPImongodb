@@ -2,7 +2,7 @@ trigger:
 - main
 
 variables:
-  azureServiceConnectionId: 'b2b461d6-4204-4ad7-a084-ed4f1f2bda5d'
+  azureServiceConnectionId: '674dd5fa-6f8e-4c8f-93db-f35f761ea1ea'
   webAppName: 'harshitwebapp'
   pythonVersion: '3.11'
 
@@ -13,7 +13,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      name: TestAgent   # ✅ Self-hosted pool
+      name: test_agent   # ✅ Self-hosted pool
 
     steps:
     - script: |
@@ -46,7 +46,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool:
-      name: TestAgent   # ✅ Self-hosted pool again
+      name: test_agent   # ✅ Self-hosted pool again
 
     environment: harshitwebapp
 
